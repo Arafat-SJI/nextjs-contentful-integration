@@ -20,8 +20,9 @@ export const loadComponents = (pageData: any): any => {
         />
       );
     }
+    {JSON.stringify(item)}
     if (item?.sys?.contentType?.sys?.id === GENERIC_SECTION) {
-      return <GenericSection key={item.sys.id} />;
+      return <GenericSection key={item.sys.id} data={item} />;
     }
     return <></>;
   });
